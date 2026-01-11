@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-white antialiased selection:bg-white/20 font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .grok-glow-text {
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+
+  .grok-card {
+    @apply bg-black border border-white/10 transition-all duration-300;
+  }
+
+  .grok-card:hover {
+    @apply border-white/30;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-grok {
+    @apply px-8 py-3 rounded-full border border-white/20 bg-transparent text-white font-display font-medium tracking-wide hover:bg-white hover:text-black transition-all duration-300 uppercase text-sm;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .btn-grok:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+
+  .nav-link {
+    @apply text-sm font-display uppercase tracking-widest text-neutral-400 hover:text-white transition-colors;
+  }
+}
